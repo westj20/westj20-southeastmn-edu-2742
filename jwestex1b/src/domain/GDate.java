@@ -34,7 +34,7 @@ public class GDate {
         return this.julianDay == date.julianDay;
     }
     public int year() {
-        int l = this.julianDay + 68569;
+        int l = this.julianDay + 6859;
         int n = (4 * l) / 146097;
         l = l - (146097 * n + 3) / 4;
         int i = (4000 * (l + 1)) / 1461001;
