@@ -1,5 +1,7 @@
 package domain;
 import java.util.Date;
+import java.util.Objects;
+
 public class GDate {
     private int julianDay = 0;
 
@@ -29,12 +31,12 @@ public class GDate {
         return new GDate(this.julianDay);
     }
 
-
-    public boolean equals(GDate date) {
-        return this.julianDay == date.julianDay;
-    }
+//    @Override
+//    public boolean equals(GDate date) {
+//        return this.julianDay == date.julianDay;
+//    }
     public int year() {
-        int l = this.julianDay + 6859;
+        int l = this.julianDay + 68569;
         int n = (4 * l) / 146097;
         l = l - (146097 * n + 3) / 4;
         int i = (4000 * (l + 1)) / 1461001;
@@ -85,6 +87,7 @@ public class GDate {
         return julianDay;
     }
 
+    @Override
     public String toString() {
         int year = year();
         int month = month();
@@ -97,5 +100,18 @@ public class GDate {
     public GDate add(int days) {
         int newJulianDay = julianDay + days;
         return new GDate(newJulianDay);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GDate date = (GDate) o;
+        return julianDay == date.julianDay;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(julianDay);
     }
 }

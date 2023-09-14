@@ -1,4 +1,6 @@
 package domain;
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class LineItem {
     private int lineItemId;
@@ -33,5 +35,28 @@ public class LineItem {
 
     public String getDescription() {
         return description;
+    }
+
+    @Override
+    public String toString() {
+        return "LineItem{" +
+                "lineItemId=" + lineItemId +
+                ", amount=" + amount +
+                ", description='" + description + '\'' +
+                '}';
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LineItem lineItem = (LineItem) o;
+        return getLineItemId() == lineItem.getLineItemId() && Double.compare(lineItem.getAmount(), getAmount()) == 0 && getDescription().equals(lineItem.getDescription());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getLineItemId(), getAmount(), getDescription());
     }
 }
