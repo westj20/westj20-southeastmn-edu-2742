@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="southeast-edu-2742-joshuawest">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/jwestex1a/src" />
+      <root url="file://$PROJECT_DIR$/jwestex1a/test" />
+      <root url="file://$PROJECT_DIR$/jwestex1b/src" />
+      <root url="file://$PROJECT_DIR$/jwestex1b/test" />
+      <root url="file://$PROJECT_DIR$/jwestex1c/Test" />
+      <root url="file://$PROJECT_DIR$/jwestex1c/src" />
+    </SOURCES>
+  </library>
+</component>

@@ -93,13 +93,13 @@ public class Invoice {
     }
 
     public GDate getInvoiceDate() {
-        return invoiceDate;
+        return invoiceDate.copy();
     }
 
 
 
     public GDate getDueDate() {
-        return dueDate;
+        return dueDate.copy();
     }
 
 
