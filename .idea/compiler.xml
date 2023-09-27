@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jwestEx1c2" />
+        <module name="jwestex1d1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo" target="19" />
       <module name="jwestex1c1" target="19" />
       <module name="jwestEx1c2" target="19" />
+      <module name="jwestex1d1" target="19" />
     </bytecodeTargetLevel>
   </component>
 </project>
